@@ -94,3 +94,6 @@ def hello():
     </body>
     </html>
     '''
+    
+from . import db
+db.init_app(app)
