@@ -44,7 +44,6 @@ def home():
     </head>
     <body>
         <h1>Bienvenue sur ma page d'accueil!</h1>
-        <p>Cliquez sur le bouton pour aller à la page Hello</p>
         <a href="/hello" class="button">Aller à Hello</a>
     </body>
     </html>
@@ -81,7 +80,6 @@ def hello():
     </head>
     <body>
         <h1>Hello, World!</h1>
-        <p>Vous êtes sur la page Hello</p>
         <a href="/" class="button">Retour à l'accueil</a>
     </body>
     </html>
