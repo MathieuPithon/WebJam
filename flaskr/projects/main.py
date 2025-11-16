@@ -3,6 +3,7 @@ from pyscript import document
 from utils.constants import COLORS
 
 def random_color():
+    print("Génération d'une couleur aléatoire...")
     nom_couleur, valeur_hex = random.choice(list(COLORS.items()))
     button = document.getElementById("color-btn")
     color_label = document.getElementById("color-name")
