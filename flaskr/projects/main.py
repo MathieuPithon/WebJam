@@ -1,6 +1,15 @@
 import random
 from pyscript import document
-from utils.constants import COLORS
+# from utils.constants import COLORS
+
+COLORS = {
+            "ROUGE": "#FF6B6B",
+            "BLEU": "#4ECDC4", 
+            "VERT": "#45B7D1",
+            "JAUNE": "#FFE66D",
+            "ORANGE": "#FF9A76",
+            "VIOLET": "#9B5DE5"
+        }
 
 def random_color():
     print("Génération d'une couleur aléatoire...")
