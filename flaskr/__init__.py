@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_mapping(
@@ -13,6 +13,9 @@ try:
 except OSError:
     pass
 
+@app.route('/pyscript.json')
+def pyscript_config():
+    return send_from_directory('.', 'pyscript.json')
 
 @app.route('/')
 def home():
