@@ -1,6 +1,6 @@
 import random
 from pyscript import document
-from utils import COLORS
+from utils.constants import COLORS
 
 def random_color():
     nom_couleur, valeur_hex = random.choice(list(COLORS.items()))
