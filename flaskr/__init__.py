@@ -15,7 +15,7 @@ except OSError:
 
 @app.route('/pyscript.json')
 def pyscript_config():
-    return send_from_directory('.', 'pyscript.json')
+    return send_from_directory('C:/Users/samsung/Documents/Python/WebJam/', 'pyscript.json')
 
 @app.route('/')
 def home():
