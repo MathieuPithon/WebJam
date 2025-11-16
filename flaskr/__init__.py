@@ -14,8 +14,8 @@ except OSError:
     pass
 
 @app.route('/pyscript.json')
-def pyscript_config():
-    return send_from_directory('C:/Users/samsung/Documents/Python/WebJam/', 'pyscript.json')
+def serve_pyscript_config():
+    return send_from_directory(os.path.dirname(os.path.abspath(__file__)), 'pyscript.json')
 
 @app.route('/')
 def home():
