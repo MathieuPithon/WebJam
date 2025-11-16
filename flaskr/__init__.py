@@ -12,6 +12,10 @@ try:
     os.makedirs(app.instance_path)
 except OSError:
     pass
+# Route pour servir main.py depuis le dossier projects
+@app.route('/projects/<path:filename>')
+def serve_projects_files(filename):
+    return send_from_directory('projects', filename)
 
 @app.route('/pyscript.json')
 def serve_pyscript_config():
