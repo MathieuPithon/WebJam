@@ -20,6 +20,6 @@ body {
             .button-return {
                 background-color: #28a745;
             }
-            .button-return {
+            .button-return:hover {
                 background-color: #1e7e34;
             }
