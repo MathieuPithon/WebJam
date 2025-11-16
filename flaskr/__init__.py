@@ -20,11 +20,11 @@ def home():
     <html>
     <head>
         <title>Page d'accueil</title>
-        <link rel="icon" type="image/png" href="{{ url_for('static', filename=/favicon/favicon-96x96.png}}" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename=/favicon/favicon.svg}}" />
-        <link rel="shortcut icon" href="{{ url_for('static', filename=/favicon/favicon.ico}}" />
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename=/favicon/apple-touch-icon.png}}" />
-        <link rel="manifest" href="{{ url_for('static', filename=/favicon/site.webmanifest}}" />
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon/favicon-96x96.png') }}" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon/favicon.svg') }}" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}" />
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}" />
+        <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}" />
         <style>
             body {
                 font-family: Arial, sans-serif;
