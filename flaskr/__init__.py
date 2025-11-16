@@ -18,7 +18,7 @@ except OSError:
 
 @app.route('/')
 def home():
-    return render_template('base.html')
+    return render_template('home/home.html')
 
 @app.route('/hello')
 def hello():
