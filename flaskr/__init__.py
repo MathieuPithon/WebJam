@@ -22,39 +22,5 @@ def home():
 
 @app.route('/hello')
 def hello():
-    return '''
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Page Hello</title>
-        <link rel="icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}" />
-        <link rel="apple-touch-icon" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}" />
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                margin-top: 50px;
-            }
-            .button {
-                display: inline-block;
-                padding: 10px 20px;
-                margin: 10px;
-                background-color: #28a745;
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                border: none;
-                cursor: pointer;
-            }
-            .button:hover {
-                background-color: #1e7e34;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Hello, World!</h1>
-        <a href="/" class="button">Retour à l'accueil</a>
-    </body>
-    </html>
-    '''
+    return render_template('home/hello.html')
     
