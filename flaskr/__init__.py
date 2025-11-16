@@ -12,9 +12,9 @@ try:
     os.makedirs(app.instance_path)
 except OSError:
     pass
-@app.route('/favicon.ico')
-def favicon():
-    return app.send_static_file('favicon/favicon.ico')
+# @app.route('/favicon.ico')
+# def favicon():
+#     return app.send_static_file('favicon/favicon.ico')
 
 @app.route('/')
 def home():
