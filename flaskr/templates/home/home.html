@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
-
 {% block header %}
-  <h1>{% block title %}Page d'Accueil{% endblock %}</h1>
+<h1>{% block title %}Page d'Accueil{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-        <h2>Bienvenue sur ma page d'accueil!</h2>
-        <a href="/hello" class="button">Aller à Hello</a>
-   
+<h2>Bienvenue sur ma page d'accueil!</h2>
+<a href="/hello" class="button">Aller à Hello</a>
+
+<button class="button"id="color-btn" py-click="random_color">Couleur aléatoire</button>
+<div id="color-name"></div>
+<script type="py" src="../../projects/main.py" config="../../../pyscript.json"></script>
 {% endblock %}
