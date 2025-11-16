@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_mapping(
@@ -18,44 +18,7 @@ def favicon():
 
 @app.route('/')
 def home():
-    return '''
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Page d'accueil</title>
-        <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon/favicon-96x96.png') }}" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon/favicon.svg') }}" />
-        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon/favicon.ico') }}" />
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}" />
-        <link rel="manifest" href="{{ url_for('static', filename='favicon/site.webmanifest') }}" />
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                margin-top: 50px;
-            }
-            .button {
-                display: inline-block;
-                padding: 10px 20px;
-                margin: 10px;
-                background-color: #007bff;
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                border: none;
-                cursor: pointer;
-            }
-            .button:hover {
-                background-color: #0056b3;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Bienvenue sur ma page d'accueil!</h1>
-        <a href="/hello" class="button">Aller à Hello</a>
-    </body>
-    </html>
-    '''
+    return render_template('base.html')
 
 @app.route('/hello')
 def hello():
