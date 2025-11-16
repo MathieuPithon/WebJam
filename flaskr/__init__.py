@@ -95,5 +95,3 @@ def hello():
     </html>
     '''
     
-from . import db
-db.init_app(app)
